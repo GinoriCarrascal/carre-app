@@ -4,12 +4,14 @@ export type History = { role: 'user' | 'assistant', content: string }
 
 const handleHistory = async (inside: History, _state: BotState) => {
     const history = _state.get<History[]>('history') ?? []
+    console.log(history)
     history.push(inside)
     await _state.update({ history })
 }
 
 const getHistory = (_state: BotState, k = 6) => {
     const history = _state.get<History[]>('history') ?? []
+    console.log(history)
     const limitHistory = history.slice(-k)
     return limitHistory
 }
