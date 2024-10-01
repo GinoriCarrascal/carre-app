@@ -5,7 +5,7 @@ import { BaileysProvider } from '@bot-whatsapp/provider-baileys'
 import flows from './flows';
 
 import AIClass from './services/ai';
-const ai = new AIClass(process.env.OPEN_API_KEY, 'gpt-3.5-turbo-16k')
+const ai = new AIClass(process.env.OPENAI_API_KEY, 'gpt-3.5-turbo-16k')
 
 
 const main = async () => {
